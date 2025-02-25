@@ -72,3 +72,12 @@ model VerificationToken {
   @@unique([identifier, token])
   @@map("verification_tokens")
 }
+
+// Create a table called [your_name] with the following columns:
+// id (Primary Key, Auto-increment)
+// value (String)
+
+model Daniela {
+  id    Int    @id @default(autoincrement())
+  value String
+}
