@@ -7,7 +7,31 @@ import { DanielaModule } from './daniela/daniela.module';
 
 @Module({
   imports: [TestModule, DanielaModule],
+import { AuthModule } from './auth/auth.module';
+import { TokenModule } from './token/token.module';
+import { PrivilegeModule } from './privilege/privilege.module';
+import { RoleModule } from './role/role.module';
+import { UserModule } from './user/user.module';
+import { APP_GUARD } from '@nestjs/core';
+import { JwtAuthGuard } from './auth/jwt.guard';
+
+@Module({
+  imports: [
+    TestModule,
+    AuthModule,
+    TokenModule,
+    PrivilegeModule,
+    RoleModule,
+    UserModule,
+  ],
   controllers: [AppController],
-  providers: [AppService, PrismaService],
+  providers: [
+    {
+      provide: APP_GUARD,
+      useClass: JwtAuthGuard,
+    },
+    AppService,
+    PrismaService,
+  ],
 })
 export class AppModule {}
