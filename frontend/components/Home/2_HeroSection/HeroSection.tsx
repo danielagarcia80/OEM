@@ -5,7 +5,7 @@ export default function HeroSection() {
     <Container
       size="md"
       style={{
-        minHeight: "82vh", // Ensures full viewport height
+        minHeight: "55vh", // Ensures full viewport height
         display: "flex",
         flexDirection: "column",
         justifyContent: "center", // Centers vertically

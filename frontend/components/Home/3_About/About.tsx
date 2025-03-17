@@ -2,6 +2,7 @@ import { Title, Text, Container, Paper, Grid } from '@mantine/core';
 
 export default function About() {
   return (
+    <div id="about"> 
     <Container
       size="lg"
       style={{
@@ -30,7 +31,8 @@ export default function About() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                padding: '20px'
+                padding: '20px',
+                backgroundColor: "#205493",
               }}
             >
               <Title order={3}>{item.title}</Title>
@@ -40,5 +42,6 @@ export default function About() {
         ))}
       </Grid>
     </Container>
+    </div>
   );
 }
