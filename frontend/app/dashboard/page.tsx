@@ -7,6 +7,9 @@ import Loading from '@/components/Loading/Loading';
 import { App } from '@/components/App/App';
 import DashBoard from '@/components/DashBoard/Dashboard';
 
+import DashBoard from '@/components/DashBoard/DashBaord';
+
+
 export default function Dashboard() {
 
      const { data: session, status } = useSession();
