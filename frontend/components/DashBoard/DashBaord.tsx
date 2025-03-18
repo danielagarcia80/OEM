@@ -8,7 +8,7 @@ const mockdata = {
     badge: 'Fall 2025',
     description: "XXXX - XXXX"
 };
-export default function DashBaord() {
+export default function Dashbaord() {
     return (
         <div>
             <ModuleCard
